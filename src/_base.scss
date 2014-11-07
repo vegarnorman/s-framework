@@ -1,0 +1,138 @@
+//  ==================
+//  BASE HTML ELEMENTS
+//  ==================
+
+html {
+  font-size: $root-font-size;
+  line-height: $base-line-height;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $body-bgcolor;
+
+  @include bp-max('m') {
+    font-size: $root-font-size-m;
+  }
+
+  @include bp-max('s') {
+    font-size: $root-font-size-s;
+  }
+}
+
+body {
+  background-color: $body-bgcolor;
+  color: $copy-color;
+  font-family: $base-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $header-color;
+}
+
+h1 {
+  @include scale(4);
+}
+
+h2 {
+  @include scale(3);
+}
+
+h3 {
+  @include scale(2);
+}
+
+h4 {
+  @include scale(1);
+}
+
+h5, h6 {
+  @include scale(0);
+}
+
+p {
+  @include scale(0);
+}
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+ul {
+  margin-left: $margin;
+  @include scale(0);
+
+  li {}
+
+  ul, ol {
+    margin-left: $margin;
+    margin-top: 0;
+  }
+}
+
+ol {
+  margin-left: $margin;
+  @include scale(0);
+
+  li {}
+
+  ul, ol {
+    margin-left: $margin;
+    margin-top: 0;
+  }
+}
+
+
+dl {
+  dt {}
+  dd {}
+}
+
+
+abbr {}
+address {}
+blockquote {}
+
+
+pre {
+  code {}
+}
+code {}
+kbd {}
+
+table {
+  thead {}
+  tbody {}
+  tfoot {}
+}
+
+
+form {}
+fieldset{
+  legend {}
+}
+label {}
+
+button,
+input[type=button],
+input[type=submit] {
+}
+
+input[type=text],
+input[type=email],
+input[type=phone] {
+}
+
+textarea {}
+input[type=radio] {}
+input[type=checkbox] {}
+input[type=number] {}
