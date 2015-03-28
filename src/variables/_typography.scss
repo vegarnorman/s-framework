@@ -1,0 +1,21 @@
+//  Typography
+//  ----------
+
+//  Font stacks
+//  $base-font-family: The font stack set as default.
+$serif-font:        serif;
+$sans-font:         sans-serif;
+$base-font:         $sans-font;
+
+//  Root font sizes
+//  Used for better font scaling across devices. Set in the HTML element for text scaling using rems.
+$root-font-size:    1.25em;
+$root-font-size-m:  1.125em;
+$root-font-size-s:  1em;
+
+//  Basic typographic variables
+//  $base-scale-factor: Used in the scale() mixin for consistent font size rhythm.
+$base-font-size:          1rem;
+$base-line-height-factor: 1.5;
+$base-scale-factor:       1.618;
+$base-line-height:        ($base-font-size * $base-line-height-factor);

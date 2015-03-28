@@ -1,0 +1,142 @@
+//  Grid generators
+//  ---------------
+
+
+//  generate-class()
+//  Generates the grid system using class names
+@mixin generate-class() {
+  .container {
+    @include container();
+  }
+
+  .row {
+    @include grid-row();
+  }
+
+  .#{$grid-namespace} {
+    @include common();
+    @include gutters();
+  }
+
+  .#{$grid-namespace}.no-gutters {
+    @include no-gutters();
+  }
+
+  @for $i from 1 through $columns {
+    .#{$grid-namespace}.g#{$i} {
+      @include grid-width($i);
+    }
+
+    @include bp("xs") {
+      .#{$grid-namespace}.xs#{$i} {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("s") {
+      .#{$grid-namespace}.s#{$i} {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("m") {
+      .#{$grid-namespace}.m#{$i} {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("l") {
+      .#{$grid-namespace}.l#{$i} {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("xl") {
+      .#{$grid-namespace}.xl#{$i} {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("xxl") {
+      .#{$grid-namespace}.xxl#{$i} {
+        @include grid-width($i);
+      }
+    }
+  }
+}
+
+
+//  generate-amcss()
+//  Generates the grid system using attribute modules
+@mixin generate-amcss() {
+  [#{$amcss-prefix}#{$grid-namespace}-container] {
+    @include container();
+  }
+
+  [#{$amcss-prefix}#{$grid-namespace}-row] {
+    @include grid-row();
+  }
+
+  [#{$amcss-prefix}#{$grid-namespace}],
+  [#{$amcss-prefix}#{$grid-namespace}-xs],
+  [#{$amcss-prefix}#{$grid-namespace}-s],
+  [#{$amcss-prefix}#{$grid-namespace}-m],
+  [#{$amcss-prefix}#{$grid-namespace}-l],
+  [#{$amcss-prefix}#{$grid-namespace}-xl],
+  [#{$amcss-prefix}#{$grid-namespace}-xxl] {
+    @include common();
+    @include gutters();
+  }
+
+  [#{$amcss-prefix}#{$grid-namespace}][#{$amcss-prefix}#{$grid-namespace}-no-gutters],
+  [#{$amcss-prefix}#{$grid-namespace}-xs][#{$amcss-prefix}#{$grid-namespace}-no-gutters],
+  [#{$amcss-prefix}#{$grid-namespace}-s][#{$amcss-prefix}#{$grid-namespace}-no-gutters],
+  [#{$amcss-prefix}#{$grid-namespace}-m][#{$amcss-prefix}#{$grid-namespace}-no-gutters],
+  [#{$amcss-prefix}#{$grid-namespace}-l][#{$amcss-prefix}#{$grid-namespace}-no-gutters],
+  [#{$amcss-prefix}#{$grid-namespace}-xl][#{$amcss-prefix}#{$grid-namespace}-no-gutters],
+  [#{$amcss-prefix}#{$grid-namespace}-xxl][#{$amcss-prefix}#{$grid-namespace}-no-gutters] {
+    @include no-gutters();
+  }
+
+  @for $i from 1 through $columns {
+    [#{$amcss-prefix}#{$grid-namespace}~="#{$i}"] {
+      @include grid-width($i);
+    }
+
+    @include bp("xs") {
+      [#{$amcss-prefix}#{$grid-namespace}-xs~="#{$i}"] {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("s") {
+      [#{$amcss-prefix}#{$grid-namespace}-s~="#{$i}"] {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("m") {
+      [#{$amcss-prefix}#{$grid-namespace}-m~="#{$i}"] {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("l") {
+      [#{$amcss-prefix}#{$grid-namespace}-l~="#{$i}"] {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("xl") {
+      [#{$amcss-prefix}#{$grid-namespace}-xl~="#{$i}"] {
+        @include grid-width($i);
+      }
+    }
+
+    @include bp("xxl") {
+      [#{$amcss-prefix}#{$grid-namespace}-xxl~="#{$i}"] {
+        @include grid-width($i);
+      }
+    }
+  }
+}

@@ -12,27 +12,27 @@
 //  Sets rules for a specific breakpoint range
 //  @param $point The breakpoint alias
 @mixin bp($point) {
-  @if ($point == xs) {
+  @if ($point == "xs") {
     @media only screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) { @content; }
   }
 
-  @else if ($point == s) {
+  @else if ($point == "s") {
     @media only screen and (min-width: $screen-s-min) and (max-width: $screen-s-max) { @content; }
   }
 
-  @else if ($point == m) {
+  @else if ($point == "m") {
     @media only screen and (min-width: $screen-m-min) and (max-width: $screen-m-max) { @content; }
   }
 
-  @else if ($point == l) {
+  @else if ($point == "l") {
     @media only screen and (min-width: $screen-l-min) and (max-width: $screen-l-max) { @content; }
   }
 
-  @else if ($point == xl) {
+  @else if ($point == "xl") {
     @media only screen and (min-width: $screen-xl-min) and (max-width: $screen-xl-max) { @content; }
   }
 
-  @else if ($point == xxl) {
+  @else if ($point == "xxl") {
     @media only screen and (min-width: $screen-xxl-min) and (max-width: $screen-xxl-max) { @content; }
   }
 }
@@ -42,27 +42,27 @@
 //  Sets rules for a breakpoint range starting from the given alias
 //  @param $point The breakpoint alias
 @mixin bp-min($point) {
-  @if ($point == xs) {
+  @if ($point == "xs") {
     @media only screen and (min-width: $screen-xs-min) { @content; }
   }
 
-  @else if ($point == s) {
+  @else if ($point == "s") {
     @media only screen and (min-width: $screen-s-min) { @content; }
   }
 
-  @else if ($point == m) {
+  @else if ($point == "m") {
     @media only screen and (min-width: $screen-m-min) { @content; }
   }
 
-  @else if ($point == l) {
+  @else if ($point == "l") {
     @media only screen and (min-width: $screen-l-min) { @content; }
   }
 
-  @else if ($point == xl) {
+  @else if ($point == "xl") {
     @media only screen and (min-width: $screen-xl-min) { @content; }
   }
 
-  @else if ($point == xxl) {
+  @else if ($point == "xxl") {
     @media only screen and (min-width: $screen-xxl-min) { @content; }
   }
 }
@@ -72,27 +72,27 @@
 //  Sets rules for a breakpoint range ending with the given alias
 //  @param $point The breakpoint alias
 @mixin bp-max($point) {
-  @if ($point == xs) {
+  @if ($point == "xs") {
     @media only screen and (max-width: $screen-xs-max) { @content; }
   }
 
-  @else if ($point == s) {
+  @else if ($point == "s") {
     @media only screen and (max-width: $screen-s-max) { @content; }
   }
 
-  @else if ($point == m) {
+  @else if ($point == "m") {
     @media only screen and (max-width: $screen-m-max) { @content; }
   }
 
-  @else if ($point == l) {
+  @else if ($point == "l") {
     @media only screen and (max-width: $screen-l-max) { @content; }
   }
 
-  @else if ($point == xl) {
+  @else if ($point == "xl") {
     @media only screen and (max-width: $screen-xl-max) { @content; }
   }
 
-  @else if ($point == xxl) {
+  @else if ($point == "xxl") {
     @media only screen and (max-width: $screen-xxl-max) { @content; }
   }
 }

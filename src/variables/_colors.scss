@@ -1,0 +1,29 @@
+//  Colors
+//  ------
+
+//  Grayscale colors, arranged from white -> black
+$color-white:           #E6F0F2;
+$color-lighter-gray:    #B8C8CC;
+$color-light-gray:      #95A3A6;
+$color-gray:            #737D80;
+$color-dark-gray:       #505859;
+$color-darker-gray:     #2E3233;
+$color-black:           #0B0D0D;
+
+//  Colors, arranged in ROYGBIV fashion
+$color-red:             #DA162D;
+$color-orange:          #DA6016;
+$color-yellow:          #F7EC36;
+$color-green:           #48D93D;
+$color-teal:            #28D582;
+$color-blue:            #0051CA;
+$color-indigo:          #842AF3;
+$color-violet:          #A000C2;
+$color-pink:            #EE51D6;
+
+//  Style variables. Probably best to use these where applicable.
+$body-bgcolor:          $color-white;
+$copy-color:            rgba($color-darker-gray, .75);
+$header-color:          rgba($color-darker-gray, .90);
+$link-color:            $color-blue;
+$link-hover-color:      $color-teal;
