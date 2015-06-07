@@ -156,7 +156,7 @@
 //  Creates a keyframes rule for animations
 //  @param $name The name of the animation
 @mixin keyframes($name) {
-  @keyframes $name {
+  @keyframes #{$name} {
     @content;
   }
 }
