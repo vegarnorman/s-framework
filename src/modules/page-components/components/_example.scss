@@ -1,0 +1,15 @@
+/**
+ *  Example component (_example.scss)
+ *
+ *  Won't actually _do_ anything other than to serve as an example as to how page
+ *  components work. Make your own instead. Feel free to delete this file.
+ */
+
+.example-component {
+  @include grid(1);
+
+  &:after {
+    content: "Hi! I am an example component. You shouldn't really use me.";
+    display: block;
+  }
+}

@@ -1,9 +1,13 @@
-//  Grid generators
-//  ---------------
+/**
+ *  Grid generators (_generator.scss)
+ *
+ *  Larger mixins for generating verbose grid systems, either using classes or AMCSS modules.
+ */
 
 
-//  generate-class()
-//  Generates the grid system using class names
+/** generate-class()
+ *  Generates the grid system using class names
+ */
 @mixin generate-class() {
   .container {
     @include container();
@@ -66,8 +70,9 @@
 }
 
 
-//  generate-amcss()
-//  Generates the grid system using attribute modules
+/** generate-amcss()
+ *  Generates the grid system using attribute modules
+ */
 @mixin generate-amcss() {
   [#{$amcss-prefix}#{$grid-namespace}-container] {
     @include container();

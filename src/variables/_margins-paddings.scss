@@ -1,5 +1,9 @@
-//  Margin and padding values
-//  -------------------------
+/**
+ *  Margins and paddings (_margins-paddings.scss)
+ *
+ *  Bootstrap-style variables for margins and paddings. Calculated based on
+ *  $base-font-size and $base-line-height.
+ */
 
 $padding:     $base-font-size;
 $padding-lg:  ($base-font-size * 2);

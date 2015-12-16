@@ -1,9 +1,12 @@
-//  Colors
-//  ------
+/**
+ *  Colors (_colors.scss)
+ *
+ *  Colors used in your project should be specified here. By default, we just specify
+ *  what we really need in the start of our project (body, text, headers and links).
+ */
 
-//  Style variables. Probably best to use these where applicable.
-$body-bgcolor:          #FFFFFF;
-$copy-color:            rgba(0, 0, 0, 0.8);
-$header-color:          rgba(0, 0, 0, 0.9);
-$link-color:            #28488F;
+$body-bgcolor:          #FFF;
+$copy-color:            #333;
+$header-color:          #111;
+$link-color:            #24C;
 $link-hover-color:      lighten($link-color, 10%);

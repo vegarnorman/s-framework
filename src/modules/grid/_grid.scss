@@ -1,12 +1,15 @@
-//	===========
-//	GRID SYSTEM
-//	===========
+/**
+ *  Grid system (_grid.scss)
+ *
+ *  Used to create grid systems you can use to simplify layout creation in your project.
+ */
 
 @import "config";
 @import "generator";
 
-//	clearfix()
-//	Employs a simple clearfix to elements that need it
+/** clearfix()
+ *  Employs a simple clearfix to elements that need it
+ */
 @mixin clearfix() {
   &:before, &:after {
     content: " ";
@@ -18,148 +21,156 @@
 }
 
 
-//	container()
-//	Defines the CSS rules for the container element
+/** container()
+ *  Defines the CSS rules for the container element
+ */
 @mixin container() {
-	margin-left: auto;
-	margin-right: auto;
-	padding: 0;
-	width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 90%;
 
-	@if ($grid-type == "float") {
-		@include clearfix();
-	}
+  @if ($grid-type == "float") {
+    @include clearfix();
+  }
 
-	@include bp("xs") 	{ max-width: $container-xs; }
-	@include bp("s") 		{ max-width: $container-s; }
-	@include bp("m") 		{ max-width: $container-m; }
-	@include bp("l") 		{ max-width: $container-l; }
-	@include bp("xl") 	{ max-width: $container-xl; }
-	@include bp("xxl") 	{ max-width: $container-xxl; }
+  @include bp("xs")   { max-width: $container-xs; }
+  @include bp("s")    { max-width: $container-s; }
+  @include bp("m")    { max-width: $container-m; }
+  @include bp("l")    { max-width: $container-l; }
+  @include bp("xl")   { max-width: $container-xl; }
+  @include bp("xxl")  { max-width: $container-xxl; }
 }
 
 
-//	grid-row()
-//	Defines the CSS rules for the row element
+/** grid-row()
+ * Defines the CSS rules for the row element
+ */
 @mixin grid-row() {
-	width: 100%;
-	margin: 0;
-	padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 
-	@if ($grid-type == "float") {
-		@include clearfix();
-	}
+  @if ($grid-type == "float") {
+    @include clearfix();
+  }
 
-	@if ($grid-type == "flex") {
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
+  @if ($grid-type == "flex") {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 
-//	common()
-//	Defines the common CSS rules for all grid elements
+/** common()
+ *  Defines the common CSS rules for all grid elements
+ */
 @mixin common() {
-	box-sizing: border-box;
-	
-	@if ($grid-type == "float") {
-		float: left;
-	}
+  box-sizing: border-box;
 
-	@if ($grid-type == "flex") {
-		display: flex;
-		flex-direction: column;
-		flex-grow: 1;
-		flex-basis: 0%;
-		flex-shrink: 0;
-	}
+  @if ($grid-type == "float") {
+    float: left;
+  }
+
+  @if ($grid-type == "flex") {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0%;
+    flex-shrink: 0;
+  }
 }
 
 
-//	gutters()
-//	Defines the CSS rules for grid elements with gutters
+/** gutters()
+ *  Defines the CSS rules for grid elements with gutters
+ */
 @mixin gutters() {
-	@if ($grid-type == "float") {
-		margin-left: $gutter;
-		margin-right: $gutter;
-	}
+  @if ($grid-type == "float") {
+    margin-left: $gutter;
+    margin-right: $gutter;
+  }
 
-	@if ($grid-type == "flex") {
-		padding-left: $gutter;
-		padding-right: $gutter;
-	}
+  @if ($grid-type == "flex") {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
 }
 
 
-//	no-gutters()
-//	Defines the CSS rules for grid elements without gutters
+/** no-gutters()
+ *  Defines the CSS rules for grid elements without gutters
+ */
 @mixin no-gutters() {
-	@if ($grid-type == "float") {
-		margin-left: 0;
-		margin-right: 0;
-	}
+  @if ($grid-type == "float") {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-	@if ($grid-type == "flex") {
-		padding-left: 0;
-		padding-right: 0;
-	}
+  @if ($grid-type == "flex") {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 
-//	grid-width()
-//	Sets the correct width/flex-basis for grid elements
-//	@param $size The number of columns to span
-//	@param $gutters true if the calculation should account for gutters, false if not (default is true)
+/** grid-width()
+ *  Sets the correct width/flex-basis for grid elements
+ *  @param $size The number of columns to span
+ *  @param $gutters true if the calculation should account for gutters, false if not (default is true)
+ */
 @mixin grid-width($size, $gutters: true) {
-	@if ($grid-type == "float") {
-		@if ($gutters == true) {
-			width: (100% / $columns) * $size - ($gutter * 2);
-		}
+  @if ($grid-type == "float") {
+    @if ($gutters == true) {
+      width: (100% / $columns) * $size - ($gutter * 2);
+    }
 
-		@else {
-			width: (100% / $columns) * $size;
-		}
-	}
+    @else {
+      width: (100% / $columns) * $size;
+    }
+  }
 
-	@if ($grid-type == "flex") {
-		flex: 0 0 ((100% / $columns) * $size);
-		max-width: ((100% / $columns) * $size);
-	}
+  @if ($grid-type == "flex") {
+    flex: 0 0 ((100% / $columns) * $size);
+    max-width: ((100% / $columns) * $size);
+  }
 }
 
 
-//	grid()
-//	Exposes the grid system directly to the rest of the Sass documents, allowing it to be used without having to generate classes
-//	@param $size The number of columns to span
-//	@param $gutters true if gutters should be applied, false if not (default is true)
+/** grid()
+ *  Exposes the grid system directly to the rest of the Sass documents, allowing it to be
+ *  used without having to generate classes
+ *  @param $size The number of columns to span
+ *  @param $gutters true if gutters should be applied, false if not (default is true)
+ */
 @mixin grid($size, $gutters: true) {
-	@include common();
+  @include common();
 
-	@if ($gutters == true) {
-		@include gutters();
-		@include grid-width($size, true);
-	}
+  @if ($gutters == true) {
+    @include gutters();
+    @include grid-width($size, true);
+  }
 
-	@else {
-		@include no-gutters();
-		@include grid-width($size, false);
-	}
+  @else {
+    @include no-gutters();
+    @include grid-width($size, false);
+  }
 }
 
 
 
-//	If the $verbose-grid variable is set to true, generate grid rules in the finished CSS
+/* If the $verbose-grid variable is set to true, generate grid rules in the finished CSS */
 @if ($verbose-grid == true) {
 
-	// If the $grid-type variable is set to 'float', generate traditional float-based grid
-	@if ($generate-type == "class") {
-		@include generate-class();
-	}
+  /* If the $grid-type variable is set to 'float', generate traditional float-based grid */
+  @if ($generate-type == "class") {
+    @include generate-class();
+  }
 
-	//	If the $grid-type variable is set to 'flex', generate flexbox grid
-	@if ($generate-type == "amcss") {
-		@include generate-amcss();
-	}
+  /* If the $grid-type variable is set to 'flex', generate flexbox grid */
+  @if ($generate-type == "amcss") {
+    @include generate-amcss();
+  }
 }

@@ -1,7 +1,9 @@
-//  Screens
-//  -------
+/**
+ *  Screen sizes (_screens.scss)
+ *
+ *  Used for RWD. Use min/max widths to specify size spans correctly.
+ */
 
-//  Screen widths for breakpoint calculation
 $screen-xs-min:   1px;
 $screen-xs-max:   320px;
 

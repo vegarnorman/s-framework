@@ -1,3 +1,9 @@
-//  ===============
-//  PAGE COMPONENTS
-//  ===============
+/**
+ *  Page components (_page-components.scss)
+ *
+ *  Master file for page components. A component is likened to an organism in
+ *  Atomic CSS (see: http://patternlab.io/about.html#organisms), and should be contained
+ *  within a submodule.
+ */
+
+ @import "components/example";

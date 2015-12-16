@@ -1,8 +1,11 @@
-//  =============================
-//  S FRAMEWORK
-//  Written by Vegar Norman, 2015
-//  http://vegar.me
-//  =============================
+/**
+ *  S Framework master file (master.css)
+ *
+ *  This is the master file for the S Framework, and only this file should be processed
+ *  as all other files are included through import statements.
+ *
+ *  Written by Vegar Norman (http://vegar.me), 2013-2015.
+ */
 
 @import "utilities/functions";
 @import "variables/variables";
@@ -10,4 +13,3 @@
 @import "base/base";
 @import "modules/modules";
 @import "vendor/vendor";
-

@@ -1,11 +1,9 @@
-//  ==================
-//  BASE HTML ELEMENTS
-//  ==================
-
-* {
-  margin: 0;
-  padding: 0;
-}
+/**
+ *  Base HTML rules (_base.html)
+ *
+ *  Provides basic resets and rules. Feel free to change this out for anything you want,
+ *  such as normalize.css or the H5BP boilerplate styles.
+ */
 
 html {
   font-size: $root-font-size;
@@ -15,14 +13,6 @@ html {
   margin: 0;
   padding: 0;
   background-color: $body-bgcolor;
-
-  @include bp-max('m') {
-    font-size: $root-font-size-m;
-  }
-
-  @include bp-max('s') {
-    font-size: $root-font-size-s;
-  }
 }
 
 body {

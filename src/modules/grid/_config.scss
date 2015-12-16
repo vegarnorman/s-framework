@@ -1,12 +1,18 @@
-//  Grid system configuration
-//  -------------------------
+/**
+ *  Grid system configuration (_config.scss)
+ *
+ *  Configuration for the grid system module. Change these variables to fit your needs.
+ */
 
-//  $columns: The number of columns in the grid
-//  $gutter: The gutter width (any kind of unit is accepted, though percentages work out the best)
-//  $grid-type: "flex" if you want a flexbox grid, "float" if you want a traditional float-based grid
-//  $grid-namespace: The namespace used for the grid when generating grid classes
-//  $verbose-grid: true if grid classes should be generated in the compiled CSS, false if not
-//  $generate-type: "class" if you want classes, "amcss" if you want attribute modules
+
+/**
+ *  $columns: The number of columns in the grid
+ *  $gutter: The gutter width (any kind of unit is accepted, though percentages work out the best)
+ *  $grid-type: "flex" if you want a flexbox grid, "float" if you want a traditional float-based grid
+ *  $grid-namespace: The namespace used for the grid when generating grid classes
+ *  $verbose-grid: true if grid classes should be generated in the compiled CSS, false if not
+ *  $generate-type: "class" if you want classes, "amcss" if you want attribute modules
+ */
 
 $columns:         12;
 $gutter:          1.2%;

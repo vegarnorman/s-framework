@@ -1,20 +1,28 @@
-//  Typography
-//  ----------
+/**
+ *  Typography variables (_typography.scss)
+ *
+ *  Site-wide typography variables. Use these rather than hard-coding font
+ *  names and sizes into your CSS rules.
+ */
 
-//  Font stacks
-//  $base-font-family: The font stack set as default.
+/**
+ *  Font stacks (change or remove as you see fit)
+ *  $base-font: The font stack used as the base font stack on your site
+ */
 $serif-font:        serif;
 $sans-font:         sans-serif;
 $base-font:         $sans-font;
 
-//  Root font sizes
-//  Used for better font scaling across devices. Set in the HTML element for text scaling using rems.
-$root-font-size:    1.25em;
-$root-font-size-m:  1.125em;
-$root-font-size-s:  1em;
-
-//  Basic typographic variables
-//  $base-scale-factor: Used in the scale() mixin for consistent font size rhythm.
+/**
+ *  Sizes
+ *  $root-font-size: The font-size set on the html element for scaling using rems.
+ *  $base-font-size: The "default" font-size for elements. Can be used on other elements than html.
+ *  $base-line-height-factor: The multiplication factor used for calculating line height
+ *      in relation to $base-font-size. See $base-line-height.
+ *  $base-scale-factor: Used for typographic scaling. See @scale().
+ *  $base-line-height: The calculated base line height.
+ */
+$root-font-size:          1.25em;
 $base-font-size:          1rem;
 $base-line-height-factor: 1.5;
 $base-scale-factor:       1.618;
